@@ -1,0 +1,144 @@
+body {
+  --sb-track-color: #B0B4BF;
+  --sb-thumb-color: #0D0C0B;
+  --sb-size: 6px;
+  background-color: #ffffff;
+  color: #B0B4BF;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica;
+  font-optical-sizing: auto;
+  font-weight: 10;
+  font-style: normal;
+}
+
+#logo-container {
+  height: 75px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#logo {
+  width: 150px;
+  height: 75px;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  height: calc(75vh - 70px);
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex: 1;
+  margin: 0 20px 20px 20px;
+}
+
+.dashboard-section.fixed-size {
+  padding: 15px;
+  border-radius: 8px;
+  width: 800px;
+  height: 625px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  color: #0D0C0B;
+  border: 2px solid #B0B4BF;
+}
+
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.dashboard-header h3 {
+  margin: 0;
+  color: #0072CE;
+}
+
+.dashboard-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.dashboard-buttons::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.dashboard-buttons::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+.dashboard-buttons::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .dashboard-buttons {
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+.dashboard-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 8px;
+  color: #0D0C0B;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dashboard-btn:hover {
+  color: #f2f3f4;
+  background-color: #0072CE;
+}
+
+
+
+.dashboard-btn .btn-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+#page-title {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#page-title h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #0D0C0B;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
